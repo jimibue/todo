@@ -1,0 +1,11 @@
+<h1>ListItems</h1>
+<%= link_to 'New', new_list_item_path %>
+<% @list_items.each do |li| %>
+    <h1><%= li.name %></h1>
+    <p><%= li.description %></p>
+    <p><%= li.complete ? 'Completed':'Not Done' %> </p>
+    <%= link_to 'Show', list_item_path(li) %>
+    <%= link_to 'Edit', edit_list_item_path(li) %>
+    <%= link_to 'Delete', list_item_path(li), method: :delete %>
+
+<% end %>

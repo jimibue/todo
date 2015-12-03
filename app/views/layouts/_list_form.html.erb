@@ -1,0 +1,12 @@
+<%= form_for @list_item do |f| %>
+    <%= f.label   :name %>
+    <%= f.text_field :name %> <br />
+    <%= f.label :description %>
+    <%= f.text_field  :description %> <br />
+
+    <%= f.label :complete %>
+    <%= f.check_box :complete%> <br /> <br />
+
+    <%= f.submit %>
+
+<% end %>
